@@ -8,6 +8,8 @@ import CommonArticle from '@/components/CommonArticle.vue';
     en-title="Contacts and Links"
     ja-title="連絡先とリンク"
     background-image-url="/images/contact.jpg"
+    background-image-author="Terje Sollie"
+    background-image-source-link="https://www.pexels.com/ja-jp/photo/i-phone-336948/"
   >
     <div
       class="

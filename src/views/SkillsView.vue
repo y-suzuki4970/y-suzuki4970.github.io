@@ -66,6 +66,8 @@ const skillKinds : SkillKind[] = [
     en-title="Skills"
     ja-title="スキル一覧"
     background-image-url="/images/skills.jpg"
+    background-image-author="Lukas"
+    background-image-source-link="https://www.pexels.com/ja-jp/photo/574071/"
   >
     <div
       class="
@@ -75,8 +77,8 @@ const skillKinds : SkillKind[] = [
       "
     >
       <CommonArticle header-text="各スキルについて">
-        <section>
-          <p>ここでは業務で利用した主な言語等について記述します。<br>その他の業務で使ったもの・趣味で使っているものについてはこちらも御覧ください。</p>
+        <section class="w-fit mx-auto">
+          <p class="indent-4">ここでは業務で利用した主な言語等について記述します。<br>その他の業務で使ったもの・趣味で使っているものについてはこちらも御覧ください。</p>
           <ul>
             <li>
               <a

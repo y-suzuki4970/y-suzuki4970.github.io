@@ -10,6 +10,8 @@ const javaSe8Url = "https://www.credly.com/badges/b670e76a-788f-4dc6-8a7a-67a5b7
     en-title="About me"
     ja-title="私について"
     background-image-url="/images/aboutme.jpg"
+    background-image-author="Min An"
+    background-image-source-link="https://www.pexels.com/ja-jp/photo/1004021/"
   >
     <div
       class="
@@ -34,6 +36,7 @@ const javaSe8Url = "https://www.credly.com/badges/b670e76a-788f-4dc6-8a7a-67a5b7
           class="
             profile-p
             mx-auto my-8
+            indent-4
           "
         >
           札幌市出身のプログラマーです。大学でITについて学び、主に自治体・公的機関等のシステム開発に携わってきました。

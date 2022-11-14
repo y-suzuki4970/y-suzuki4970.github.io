@@ -5,6 +5,8 @@ import TopPageViewSection from '@/components/TopPageViewSection.vue';
 <template>
   <TopPageViewSection
     background-image-url="/images/top-view.jpg"
+    background-image-name="神田明神 (2017年)"
+    background-image-author="SUZUKI Yuta"
   >
     <div
       class="
@@ -21,7 +23,7 @@ import TopPageViewSection from '@/components/TopPageViewSection.vue';
           text-5xl text-center
         "
       >
-        <p>Welcome!</p>
+        <p class="my-16">Welcome!</p>
         <p class="text-xl">ここはうまれたてのページです。</p>
         <p class="text-xl">まだ見にくい部分もあるかもしれませんが、ご容赦ください。</p>
       </div>
