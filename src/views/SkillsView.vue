@@ -117,6 +117,18 @@ const skillKinds : SkillKind[] = [
           </table>
         </CommonArticle>
       </template>
+      <aside
+        class="
+          w-fit mx-auto
+        "
+      >
+        <p class="indent-4">ちなみに、このページは個人的に勉強しているVue.js 3で作成しています。いちおう、利用している技術について記述しておきます。</p>
+        <ul class="list-disc ml-6">
+          <li>Vue.js 3</li>
+          <li>TailwindCSS</li>
+          <li>SCSS</li>
+        </ul>
+      </aside>
     </div>
   </TopPageViewSection>
 </template>
