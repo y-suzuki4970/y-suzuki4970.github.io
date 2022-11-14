@@ -1,10 +1,5 @@
 <script setup lang="ts">
-import { computed } from "vue";
-
-defineProps<{ rate: number, sizeInPx: number }>();
-const styles = computed(() => {
-  return { "width": "1.25rem" };
-});
+defineProps<{ rate: number }>();
 </script>
 
 <template>
@@ -21,10 +16,18 @@ const styles = computed(() => {
     </svg>
   </div>
   <template v-for="i of 5" :key="i">
-    <svg v-if="Math.round(rate) >= i" viewBox="0 0 24 24" class="rate-svg svg-star" :style="styles">
+    <svg
+      v-if="Math.round(rate) >= i"
+      viewBox="0 0 24 24"
+      class="rate-svg inline stroke-yellow-600 w-5"
+    >
       <use xlink:href="#svgRateStar" />
     </svg>
-    <svg v-if="Math.round(rate) < i" viewBox="0 0 24 24" class="rate-svg svg-star-outline" :style="styles">
+    <svg
+      v-if="Math.round(rate) < i"
+      viewBox="0 0 24 24"
+      class="rate-svg inline stroke-yellow-600 w-5"
+    >
       <use xlink:href="#svgRateStarOutline" />
     </svg>
   </template>
@@ -32,8 +35,6 @@ const styles = computed(() => {
 
 <style scoped lang="scss">
 .rate-svg {
-  display: inline;
-  stroke:  chocolate;
   text-shadow: 2px 2px 2px #111, -1px -1px 2px #111;
 }
 </style>

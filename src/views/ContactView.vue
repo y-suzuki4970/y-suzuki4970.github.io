@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import TopPageViewSection from '@/components/TopPageViewSection.vue';
+import CommonArticle from '@/components/CommonArticle.vue';
 </script>
 
 <template>
@@ -8,23 +9,23 @@ import TopPageViewSection from '@/components/TopPageViewSection.vue';
     ja-title="連絡先とリンク"
     background-image-url="/images/contact.jpg"
   >
-    <div class="container">
-      <article>
-        <header>
-          <h3>Email</h3>
-        </header>
-        <section>
-          <p>y.suzuki4970 (gmail.com)</p>
-        </section>
-      </article>
-      <article>
-        <header>
-          <h3>GitHub</h3>
-        </header>
-        <section>
-          <p><a href="https://github.com/y-suzuki4970">https://github.com/y-suzuki4970</a></p>
-        </section>
-      </article>
+    <div
+      class="
+        container
+        mx-auto my-0 mt-16 mb-4
+      "
+    >
+      <CommonArticle header-text="Email">
+        <p class="text-center">y.suzuki4970 (gmail.com)</p>
+      </CommonArticle>
+      <CommonArticle header-text="GitHub">
+        <p class="text-center">
+          <a
+            href="https://github.com/y-suzuki4970"
+            target="_blank"
+          >https://github.com/y-suzuki4970</a>
+        </p>
+      </CommonArticle>
     </div>
   </TopPageViewSection>
 </template>
@@ -33,13 +34,10 @@ import TopPageViewSection from '@/components/TopPageViewSection.vue';
 @import "@/assets/styles/variables.scss";
 
 .container {
-  margin: 0 auto;
-  padding-block-start: 4rem;
-  padding-block-end: 1rem;
   width: $mainWidth;
   min-width: $minWidth;
 }
-header {
+.contact-header {
   margin: 0 auto;
   margin-block-start: 1rem;
   margin-block-end: 1rem;

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import TopPageViewSection from '@/components/TopPageViewSection.vue';
+import CommonArticle from '@/components/CommonArticle.vue';
 
 const javaSe8Url = "https://www.credly.com/badges/b670e76a-788f-4dc6-8a7a-67a5b7fc8476/public_url";
 </script>
@@ -10,13 +11,16 @@ const javaSe8Url = "https://www.credly.com/badges/b670e76a-788f-4dc6-8a7a-67a5b7
     ja-title="私について"
     background-image-url="/images/aboutme.jpg"
   >
-    <div class="container">
-      <section>
-        <header>
-          <h3>プロフィール</h3>
-        </header>
+    <div
+      class="
+        container
+        mx-auto my-0
+        w-4/5 pt-16 pb-4
+      "
+    >
+      <CommonArticle header-text="プロフィール">
         <div>
-          <dl>
+          <dl class="grid">
             <dt>氏名</dt>
             <dd>鈴木 勇太</dd>
             <dd>すずき ゆうた</dd>
@@ -26,19 +30,23 @@ const javaSe8Url = "https://www.credly.com/badges/b670e76a-788f-4dc6-8a7a-67a5b7
             <dd>Sapporo-shi, Hokkaido</dd>
           </dl>
         </div>
-        <p>札幌市出身のプログラマーです。大学でITについて学び、主に自治体・公的機関等のシステム開発に携わってきました。</p>
-      </section>
-      <section>
-        <header>
-          <h3>Certifications</h3>
-        </header>
+        <p
+          class="
+            profile-p
+            mx-auto my-8
+          "
+        >
+          札幌市出身のプログラマーです。大学でITについて学び、主に自治体・公的機関等のシステム開発に携わってきました。
+        </p>
+      </CommonArticle>
+      <CommonArticle header-text="資格">
         <div>
-          <dl>
+          <dl class="grid">
             <dt>Oracle Certified Java Programmer</dt>
             <dd><a :href="javaSe8Url" target="_blank">Silver SE 8 (JPN)</a></dd>
           </dl>
         </div>
-      </section>
+      </CommonArticle>
     </div>
   </TopPageViewSection>
 </template>
@@ -47,25 +55,14 @@ const javaSe8Url = "https://www.credly.com/badges/b670e76a-788f-4dc6-8a7a-67a5b7
 @import "@/assets/styles/variables.scss";
 
 .container {
-  margin: 0 auto;
-  padding-block-start: 4rem;
-  padding-block-end: 1rem;
   width: $mainWidth;
   min-width: $minWidth;
 }
-header {
-  margin: 0 auto;
-  margin-block-start: 1rem;
-  margin-block-end: 1rem;
-  text-align: center;
-}
-section, p {
-  margin: 0 auto;
+.profile-section, .profile-p {
   width: $mainWidth;
   min-width: $minWidth;
 }
-dl {
-  display: grid;
+dl.grid {
   dt {
     grid-column: 1;
     font-weight: bold;

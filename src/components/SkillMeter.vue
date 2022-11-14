@@ -17,7 +17,11 @@ const styles = computed(() => {
     max="5"
     low="1"
     high="4"
-    class="meter"
+    class="
+      meter relative
+      after:absolute
+      after:left-0 after:top-1/2 after:-translate-y-1/2
+    "
     :style="styles"
     :value="value"
   >
@@ -29,17 +33,8 @@ const styles = computed(() => {
 @import "@/assets/styles/variables.scss";
 
 .meter {
-  position: relative;
   &::after {
     content: attr(value);
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
   }
-  /*
-  color: #eee;
-  text-shadow: 2px 2px 4px #111, -2px -2px 4px #111;
-  */
 }
 </style>

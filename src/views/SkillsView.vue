@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import TopPageViewSection from '@/components/TopPageViewSection.vue';
+import CommonArticle from '@/components/CommonArticle.vue';
 import SkillMeter from '@/components/SkillMeter.vue';
-import RatignStars from '@/components/RatignStars.vue';
+import RatingStars from '@/components/RatingStars.vue';
 
 interface Skill {
   name: string;
@@ -66,29 +67,39 @@ const skillKinds : SkillKind[] = [
     ja-title="スキル一覧"
     background-image-url="/images/skills.jpg"
   >
-    <div class="container">
-      <article>
-        <header>
-          <h4>各スキルについて</h4>
-        </header>
+    <div
+      class="
+        container
+        mx-auto my-0
+        w-4/5 pt-16 pb-4
+      "
+    >
+      <CommonArticle header-text="各スキルについて">
         <section>
-          <p>業務で使ったもの・趣味で使っているものについてはこちらも御覧ください。</p>
-          <ul class="ul">
-            <li><a href="https://stackshare.io/y-suzuki4970/works">stackshare - 業務で使ったスキル</a></li>
-            <li><a href="https://stackshare.io/y-suzuki4970/hobby">stackshare - 趣味で使っているスキル</a></li>
+          <p>ここでは業務で利用した主な言語等について記述します。<br>その他の業務で使ったもの・趣味で使っているものについてはこちらも御覧ください。</p>
+          <ul>
+            <li>
+              <a
+                href="https://stackshare.io/y-suzuki4970/works"
+                target="_blank"
+              >stackshare - 業務で使ったスキル</a>
+            </li>
+            <li>
+              <a
+                href="https://stackshare.io/y-suzuki4970/hobby"
+                target="_blank"
+              >stackshare - 趣味で使っているスキル</a>
+            </li>
           </ul>
         </section>
-      </article>
+      </CommonArticle>
       <template v-for="(skillKind, i) in skillKinds" :key="i">
-        <section>
-          <header>
-            <h4>{{ skillKind.name }}</h4>
-          </header>
+        <CommonArticle :header-text="skillKind.name">
           <table class="skills-table">
             <thead>
               <tr>
                 <th>{{ skillKind.singleName }}</th>
-                <th style="min-width: calc(1.375rem * 5)">好き</th>
+                <th class="min-w-fit">Like</th>
                 <th>自信</th>
               </tr>
             </thead>
@@ -96,13 +107,13 @@ const skillKinds : SkillKind[] = [
               <template v-for="(skill, j) in skillKind.skills" :key="j">
                 <tr>
                   <th>{{ skill.name }}</th>
-                  <td><RatignStars :rate="skill.like" :size-in-px="24" /></td>
+                  <td><RatingStars :rate="skill.like" /></td>
                   <td><SkillMeter :value="skill.confidence" /></td>
                 </tr>
               </template>
             </tbody>
           </table>
-        </section>
+        </CommonArticle>
       </template>
     </div>
   </TopPageViewSection>
@@ -118,27 +129,13 @@ const skillKinds : SkillKind[] = [
   width: $mainWidth;
   min-width: $minWidth;
 }
-section {
-  margin: 0 auto;
-  width: 80%;
-  min-width: 400px;
-}
-
-header {
-  margin: 0 auto;
-  margin-block-start: 1rem;
-  margin-block-end: 1rem;
-  text-align: center;
-}
-
-.ul {
-  margin-inline-start: 2rem;
-  list-style: none;
-}
 .skills-table {
+  border-collapse: separate;
+  border-spacing: 1px;
   margin-inline-start: 2rem;
   margin: 0 auto;
   th, td {
+    padding: 2px;
     background: #00000044;
   }
   tbody {

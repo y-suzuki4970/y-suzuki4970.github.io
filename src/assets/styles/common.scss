@@ -17,5 +17,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  text-indent: 1em;;
+  text-indent: 1em;
+}
+
+a {
+  text-decoration: underline;
+  color: blue;
+  &:hover {
+    background-color: #eee5;
+    cursor: pointer !important;
+  }
+  &:active {
+    color: red;
+  }
+  &:visited {
+    color: purple;
+  }
+}
+
+ul {
+  margin-inline-start: 2rem;
 }

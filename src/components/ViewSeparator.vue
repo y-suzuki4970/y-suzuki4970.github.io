@@ -1,6 +1,19 @@
 <template>
-  <section class="view-separator">
-    <p>&nbsp;</p>
+  <section
+    class="
+      view-separator
+      static flex
+      left-0 top-0 w-full h-px
+      bg-transparent
+    "
+  >
+    <p
+      class="
+        w-full h-px bg-gray-50
+      "
+    >
+      &nbsp;
+    </p>
   </section>
 </template>
 
@@ -8,18 +21,8 @@
 @import "@/assets/styles/variables.scss";
 
 .view-separator {
-  position: static;
-  display: flex;
-  top: 0;
-  left: 0;
-  height: 2px;
-  width: 100%;
-  background-color: transparent;
   p {
-    height: 2px;
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0 0 24px #fff;
+    box-shadow: 0 0 24px #eee;
   }
 }
 </style>
