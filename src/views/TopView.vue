@@ -51,10 +51,10 @@ import TopPageViewSection from '@/components/TopPageViewSection.vue';
 </template>
 
 <style scoped lang="scss">
-@import "@/assets/styles/variables.scss";
+@use "@/assets/styles/variables";
 
 .container {
-  min-width: $minWidth;
+  min-width: variables.$minWidth;
 }
 .contents {
   transform: translateY(-50%) translateX(-50%);

@@ -30,8 +30,6 @@ const styles = computed(() => {
 </template>
 
 <style scoped lang="scss">
-@import "@/assets/styles/variables.scss";
-
 .meter {
   &::after {
     content: attr(value);

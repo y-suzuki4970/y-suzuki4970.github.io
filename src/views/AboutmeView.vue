@@ -55,15 +55,15 @@ const javaSe8Url = "https://www.credly.com/badges/b670e76a-788f-4dc6-8a7a-67a5b7
 </template>
 
 <style scoped lang="scss">
-@import "@/assets/styles/variables.scss";
+@use "@/assets/styles/variables";
 
 .container {
-  width: $mainWidth;
-  min-width: $minWidth;
+  width: variables.$mainWidth;
+  min-width: variables.$minWidth;
 }
 .profile-section, .profile-p {
-  width: $mainWidth;
-  min-width: $minWidth;
+  width: variables.$mainWidth;
+  min-width: variables.$minWidth;
 }
 dl.grid {
   dt {

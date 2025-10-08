@@ -14,10 +14,10 @@
 </template>
 
 <style scoped lang="scss">
-@import "@/assets/styles/variables.scss";
+@use "@/assets/styles/variables";
 
 #mainHeader {
-  height: $headerHeight;
+  height: variables.$headerHeight;
   box-shadow: 0 4px 16px #111;
 }
 .site-name {

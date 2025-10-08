@@ -1,4 +1,4 @@
-@import "variables.scss";
+@use "variables";
 
 @tailwind base;
 @tailwind components;
@@ -7,8 +7,8 @@
 /* tailwind overrides */
 
 .h-screen {
-  height: $screenHeight;
+  height: variables.$screenHeight;
 }
 .min-h-screen {
-  min-height: $screenHeight;
+  min-height: variables.$screenHeight;
 }

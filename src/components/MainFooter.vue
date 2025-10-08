@@ -12,7 +12,6 @@
 </template>
 
 <style scoped lang="scss">
-@import "@/assets/styles/variables.scss";
 #mainFooter {
   text-shadow: 0 4px 16px #333;
 }

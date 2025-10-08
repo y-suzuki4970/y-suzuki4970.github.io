@@ -134,14 +134,14 @@ const skillKinds : SkillKind[] = [
 </template>
 
 <style scoped lang="scss">
-@import "@/assets/styles/variables.scss";
+@use "@/assets/styles/variables";
 
 .container {
   margin: 0 auto;
   padding-block-start: 4rem;
   padding-block-end: 1rem;
-  width: $mainWidth;
-  min-width: $minWidth;
+  width: variables.$mainWidth;
+  min-width: variables.$minWidth;
 }
 .skills-table {
   border-collapse: separate;

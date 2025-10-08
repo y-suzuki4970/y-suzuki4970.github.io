@@ -69,12 +69,12 @@ const props = defineProps<{
 </template>
 
 <style scoped lang="scss">
-@import "@/assets/styles/variables.scss";
+@use "@/assets/styles/variables";
 
 .top-page-view {
   &_header {
-    width: $mainWidth;
-    min-width: $minWidth;
+    width: variables.$mainWidth;
+    min-width: variables.$minWidth;
   }
 }
 </style>

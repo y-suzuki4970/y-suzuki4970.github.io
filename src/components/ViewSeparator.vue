@@ -18,8 +18,6 @@
 </template>
 
 <style scoped lang="scss">
-@import "@/assets/styles/variables.scss";
-
 .view-separator {
   p {
     box-shadow: 0 0 24px #eee;
