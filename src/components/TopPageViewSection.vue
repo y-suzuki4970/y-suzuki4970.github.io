@@ -70,7 +70,9 @@ const props = defineProps<{
 
 <style scoped lang="scss">
 @use "@/assets/styles/variables";
-
+.top-page-view_container {
+  background-position: center;
+}
 .top-page-view {
   &_header {
     width: variables.$mainWidth;
